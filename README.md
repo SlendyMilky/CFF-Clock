@@ -19,5 +19,5 @@ optionnel `fps` définit la fréquence de rafraîchissement de l'horloge. Doit �
 `myClock.stop()` arrêtera l'horloge.
 
 ## Todo
--[] Faire un widget macos
--[] Adapter le code pour les écrans de smartphone
+- [ ] Faire un widget macos
+- [ ] Adapter le code pour les écrans de smartphone
