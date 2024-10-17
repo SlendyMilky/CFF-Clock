@@ -3,34 +3,22 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<script defer src="https://pulse.slyc.ch/script.js" data-website-id="e8a547f8-411c-41fe-8601-142e55be0867"></script>
-	<title>CFF Clock</title>
+	<title id="page-title">SBB Uhr</title>
 
 	<!-- Scripts -->
-	<script src="CFFClock-1.3.js"></script>
-	<style>
-		body {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			margin: 0;
-			background-color: rgb(255, 255, 255);
-		}
-		#cff_clock_container {
-			width: 80vh;
-			height: 80vh;
-			position: absolute;
-		}
-	</style>
+	<script src="/js/sbbUhr-1.3.js"></script>
+	<script src="/js/background.js"></script>
+	<script src="/js/setTitle.js"></script>
 	</head>
 
-	<body>
-		<div id="cff_clock_container"></div>
+	<body style="padding: 0; margin: 0; background-color: transparent;">
+		<!-- Container div can have any size and proportion. The Clock will fill to the shortest length. The position of the container doesnt matter-->
+		<div id="sbb_uhr_container" style="width: 100vw; height: 100vh; top: 1; left: 1; position: center; background-color: var(--background-color);"> </div>
 		<script type="text/javascript">
-			var myClock;
-			myClock = new CFFClock("cff_clock_container", false, 120);
-			myClock.start();
+			var myClock; // define Clock object
+			myClock = new sbbUhr("sbb_uhr_container", false, 60); // create new clock object sbbUhr([ID of container], [default = false, true = dark background, false = light background], Refresh rate in Frames per Second [default = as many as possible])
+			myClock.start(); // start clock
+			//myClock.stop(); // call to stop clock.
 		</script>
 	</body>
 </html>
