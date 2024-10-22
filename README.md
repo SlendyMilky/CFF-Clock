@@ -20,6 +20,11 @@ Dans un script séparé, créez une nouvelle horloge `var myClock = new sbbUhr(c
 - `myClock.stop()` arrêtera l'horloge.
 - `myClock.invertColors()` inversera les couleurs de l'horloge si l'argument 'inverted' est présent dans l'URL.
 
+## Fonctionnalités URL
+
+- Ajoutez `?stop` à l'URL pour arrêter l'horloge.
+- Ajoutez `?inverted` à l'URL pour activer le mode inversé (fond noir et aiguilles blanches).
+
 ## Configuration du titre
 
 Le fichier `js/setTitle.js` ajuste le titre de la page en fonction de la langue de l'utilisateur. Les titres disponibles sont "Horloge CFF" pour le français, "SBB Uhr" pour l'allemand, "FFS Orologio" pour l'italien, et "SBB Clock" par défaut.
