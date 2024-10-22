@@ -16,10 +16,24 @@
 		<!-- Container div can have any size and proportion. The Clock will fill to the shortest length. The position of the container doesnt matter-->
 		<div id="sbb_uhr_container" style="width: 100vw; height: 100vh; top: 1; left: 1; position: center; background-color: var(--background-color);"> </div>
 		<script type="text/javascript">
-			var myClock; // define Clock object
-			myClock = new sbbUhr("sbb_uhr_container", false, 60); // create new clock object sbbUhr([ID of container], [default = false, true = dark background, false = light background], Refresh rate in Frames per Second [default = as many as possible])
-			myClock.start(); // start clock
-			//myClock.stop(); // call to stop clock.
+			// Vérification des arguments dans l'URL
+			(function() {
+				var urlParams = new URLSearchParams(window.location.search);
+				var myClock; // définir l'objet Clock
+				myClock = new sbbUhr("sbb_uhr_container", false, 60); // créer un nouvel objet horloge sbbUhr
+
+				if (urlParams.has('stop')) {
+					// Si l'argument 'stop' est présent, arrêter l'horloge
+					myClock.stop(); // arrêter l'horloge
+				} else {
+					myClock.start(); // démarrer l'horloge
+				}
+
+				if (urlParams.has('inverted')) {
+					// Si l'argument 'inverted' est présent, inverser les couleurs
+					myClock.invertColors();
+				}
+			})();
 		</script>
 	</body>
 </html>
