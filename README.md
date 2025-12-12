@@ -1,6 +1,6 @@
 # CFF Clock
 
-Une version JavaScript de la célèbre horloge SBB pour une utilisation numérique. Désormais, il est possible d'accéder à l'horloge via : [sbb-clock.slyc.ch](http://sbb-clock.slyc.ch), [cff-clock.slyc.ch](http://cff-clock.slyc.ch), [ffs-clock.slyc.ch](http://ffs-clock.slyc.ch).
+Une version JavaScript de la célèbre horloge SBB pour une utilisation numérique. Désormais, il est possible d'accéder à l'horloge via : [sbb-clock.slyc.ch](https://sbb-clock.slyc.ch), [cff-clock.slyc.ch](https://cff-clock.slyc.ch), [ffs-clock.slyc.ch](https://ffs-clock.slyc.ch).
 
 ## Initialisation
 
